@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+
+ <tiles-definitions>
+ 
+ 		<definition name="base.login" template="baselayout.jsp">
+       <put-attribute name="header" value=""/>
+       <put-attribute name="footer" value=""/>
+       <put-attribute name="menu" value=""/>
+       </definition>
+       	
+       	<definition name="LoginPageView" extends="base.login">
+	       <put-attribute name="title" value="Login Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Login/LoginPage.jsp"/>
+	     </definition>
+       
+       <definition name="LogoutPageView" extends="base.login">
+	       <put-attribute name="title" value="Login Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Login/LoginPage.jsp"/>
+	     </definition>
+       
+       
+        <!-- Dealer base layout -->
+       <definition name="DealerView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Login Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/DealerDispaly.jsp"/>
+	     </definition>
+       
+       
+		 <!-- Administrator base layout -->
+		<definition name="base.MedicalStore" template="baselayout.jsp">
+		       <put-attribute name="header" value="/MedicalHeader.jsp"/> 
+		       <put-attribute name="footer" value="/Medicalfooter.jsp"/>
+		       <put-attribute name="menu" value="/MedicalMenu.jsp"/> 
+		 </definition>
+		 
+ 		 
+	 	 <definition name="HomePageView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Home Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Login/HomePage.jsp"/>
+	     </definition>
+			
+		<definition name="CompanyView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Company Detail"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/CompanyDetail.jsp"/>
+	     </definition>
+	    
+	    <definition name="AddProductView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Login Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Product/AddProduct.jsp"/>
+	     </definition>
+	     
+	     <definition name="AddMedicineView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Medicine Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/MedicineMaster.jsp"/>
+	     </definition>
+	     
+	      <definition name="TaxView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Tax Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/TaxMaster.jsp"/>
+	     </definition>
+	     
+	     <definition name="PatientView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Patient page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/PatientMaster.jsp"/>
+	     </definition>
+		<definition name="DoctorMasterView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Doctor Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Master/DoctorMaster.jsp"/>
+	     </definition>
+	      
+	      <definition name="AddSalesView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Sale Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Sales/AddSales.jsp"/>
+	     </definition>
+	     
+	      <definition name="AddStockView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Stock Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Stock/AddStock.jsp"/>
+	     </definition>
+	     
+	     <definition name="AddPurchaseView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Purchase/AddPurchase.jsp"/>
+	     </definition>
+	     
+	     <definition name="AddPurchaseDtlView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Detail Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/PurchaseDetail/PurchaseDetail.jsp"/>
+	     </definition>
+	     
+	      	<definition name="AddExpireMedicinepageView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Login Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/ExpProduct/ProductExpire.jsp"/>
+	       </definition>
+	       
+	        <definition name="AllPurchaseReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/AllPurchaseReport.jsp"/>
+	     </definition>
+	     
+	     <definition name="DailyPurchaseReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/DailyPurchaseReport.jsp"/>
+	     </definition>
+	     
+	     <definition name="DailySalesReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/saleDailyReport.jsp"/>
+	     </definition>
+	     
+	     <definition name="AllSalesReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/AllSalereport.jsp"/>
+	     </definition>
+	     
+	     <definition name="DailySaleReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Sale Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/DailySaleReport.jsp"/>
+	     </definition>
+	     
+	     <definition name="DailarReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/DealerWisePurchase.jsp"/>
+	     </definition>
+	     <definition name="CompanyReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="purchase Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/CompanyWisePurchase.jsp"/>
+	     </definition>
+	     
+	      <definition name="SaleProductWiseReportView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Sale ProductWise Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/SaleProductWiseReportView.jsp"/>
+	     </definition>
+	      <definition name="SaleCompanyWiseView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="Sale Company Wise Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/SaleCompanyWise.jsp"/>
+	     </definition>
+	       <definition name="saleProductView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="sale Report Page"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/SaleWisePurchase.jsp"/>
+	     </definition>
+	       <definition name="expiryView" extends="base.MedicalStore">
+	       <put-attribute name="title" value="expiry report"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/ExpiryReport.jsp"/>
+	     </definition>
+	     
+	        <definition name="saledatewisereport" extends="base.MedicalStore">
+	       <put-attribute name="title" value="sale datewise report"/>
+	       <put-attribute name="body" value="/WEB-INF/jsp/Report/SaleDateWise.jsp"/>
+	     </definition> 
+	     
+	<definition name="SaleDoctorWiseView" extends="base.MedicalStore">
+		<put-attribute name="title" value="sale doctor wise report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Report/SaleDoctorWise.jsp" />
+	</definition>
+	     
+ </tiles-definitions>  

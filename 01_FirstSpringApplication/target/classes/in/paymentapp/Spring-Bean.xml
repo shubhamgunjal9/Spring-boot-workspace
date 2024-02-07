@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean name = "cashpay" class = "in.paymentapp.CashPayment"></bean>
+        
+        <bean name = "debitpay" class = "in.paymentapp.DebitcardPayment"></bean>
+        
+        <bean name = "upipay" class = "in.paymentapp.UpiPayment"></bean>
+        
+        <bean name = "creditpay" class = "in.paymentapp.CreditPay"></bean>
+        
+        <bean name = "BillCollect1" class = "in.paymentapp.BillCollector">
+        	<property name="payment" ref="cashpay"></property>
+        </bean>
+        
+        <bean name = "BillCollect2" class = "in.paymentapp.BillCollector">
+        	<property name="payment" ref="debitpay"></property>
+        </bean>
+        
+        <bean name = "BillCollect3" class = "in.paymentapp.BillCollector">
+        	<property name="payment" ref="upipay"></property>
+        </bean>
+        
+        <bean name = "BillCollect4" class = "in.paymentapp.BillCollector">
+        	<property name="payment" ref="creditpay"></property>
+        </bean>
+</beans>

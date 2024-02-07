@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="customerReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72e9575c-41ab-46f8-bd6a-feaaf9c64a6d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="216497d7-aacb-4bfd-a523-a3f9144d7c1c"/>
+	<parameter name="roomId" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from(select r.roomNo,r.date,r.r_paid,r.balance,r.roomRent,r.month from rentmodel r where r.roomNo=$P{roomId} order by rId desc )x group by month]]>
+	</queryString>
+	<field name="roomNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="r_paid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roomRent" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="totalPaid" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{r_paid}]]></variableExpression>
+	</variable>
+	<title>
+		<band height="116" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="7" width="554" height="95" uuid="dfb581e7-0643-460f-8c4d-913e1fea3c3c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="118" y="61" width="430" height="13" uuid="38e51cb6-cd8e-4b4e-b26b-a0a7768e5131"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[MOB - 9922480844, 8421301544, 9764616992 EMAIL- jadhavtemposervice@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="49" width="422" height="13" uuid="56329e77-b6e9-4ab4-9e92-8e7a5b71880f"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[PLOT NO-70/1,S BLOCK,NEAR SHREE YASH HOTEL,MIDC BHOSARI, PUNE-411026]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="77" width="162" height="24" uuid="8eaa647d-9075-488a-9394-ee1bb26a6042"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Total Room Rent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="9" width="118" height="22" uuid="f438e3b1-59d6-4f9b-b9ce-2b96cd57af83"/>
+				<text><![CDATA["Shree Ganesh Krupa"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="21" width="411" height="29" uuid="3e316ed8-c35b-478f-bd92-cd024519d79f"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="24" isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[SUMAJAI NIVAS HOME RENT]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-3" y="12" width="309" height="80" uuid="7e5a3d88-52e0-47da-a415-37fd1c7fdee5"/>
+				<imageExpression><![CDATA["C:\\house_PNG50.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="31" width="554" height="1" uuid="fa8950ef-1caf-41b1-addd-5678f8fec47b"/>
+			</line>
+			<staticText>
+				<reportElement x="382" y="9" width="83" height="20" uuid="990ed59b-dfb0-49c6-8d4a-0919d92bac09"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date  :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="554" height="1" uuid="7c423832-e13e-4bac-8f3d-d722c29ec8b4"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="10" width="70" height="20" uuid="b49ae1a4-0f1e-4211-85f9-ae33242f05d5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room No:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="77" y="10" width="150" height="20" uuid="0a998f12-c697-43ee-8755-ee4c579fe9ab"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roomNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="201" y="9" width="36" height="20" uuid="d8bb6dd3-1c08-4829-87a6-150fb792f5e3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rent :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="241" y="9" width="91" height="20" uuid="e1b37052-c394-42c4-b95b-e0b20f5b92e2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roomRent}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="430" y="10" width="100" height="20" uuid="a25b0389-ce00-4cb8-bf34-c7e7f784b394"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="23" width="554" height="1" uuid="1dc731ee-dc16-4393-8729-cf387c95b87e"/>
+			</line>
+			<staticText>
+				<reportElement x="370" y="3" width="67" height="20" uuid="d0b878c5-1506-4ed9-9abe-b0b0cff9f1ba"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="4" width="67" height="20" uuid="d12dbcf8-be63-4c21-8460-29802d761aa6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="4" width="67" height="20" uuid="d15dc53b-beb2-41e7-9702-47a5483d10ee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr. No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="3" width="67" height="20" uuid="d26cff71-f379-4bc6-8513-626823eb4d39"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" uuid="a7e7ef9d-cd27-425a-a398-2a80ab98dded"/>
+			</line>
+			<textField>
+				<reportElement x="370" y="5" width="67" height="20" uuid="82802c1c-d3b7-4b83-88f7-65ae85d5f2b7"/>
+				<textFieldExpression><![CDATA[$F{r_paid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="4" width="67" height="20" uuid="c143218a-31fc-4fac-a813-74fd23f4f208"/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="5" width="67" height="20" uuid="12be8701-4233-4881-b058-adc0af3fda43"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="4" width="67" height="20" uuid="20acb377-2a5f-4656-af26-80204b92f42d"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="3" width="48" height="20" uuid="0aa35adb-24ca-4684-8059-2ff39cce455f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="22" width="100" height="20" uuid="1001e3d1-6099-44a2-824e-8cf6dc78db76"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ **including light bill]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="49b6180c-aa8a-4168-9cea-6aeb580acc6b"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="35" width="555" height="1" uuid="b6ac700d-fb07-44c3-bd41-a7441c35b225"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="37" width="555" height="1" uuid="b73d0d26-5a2c-455d-95fa-b11d5bd683b4"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="372" y="2" width="100" height="20" uuid="6796fcca-cd4a-4c55-8b1e-6a3a674ac26e"/>
+				<textFieldExpression><![CDATA[$V{totalPaid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

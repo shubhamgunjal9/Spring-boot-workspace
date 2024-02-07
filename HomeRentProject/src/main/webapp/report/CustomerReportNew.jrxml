@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="customerReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72e9575c-41ab-46f8-bd6a-feaaf9c64a6d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="78"/>
+	<parameter name="cName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM rentmodel r inner join customer c on c.cId=r.cId where r.cName=$P{cName} order by r.rId desc]]>
+	</queryString>
+	<field name="rId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="current_meter" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="joinDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lightBill" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="meter" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="r_paid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="r_remaining" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roomNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roomRent" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="adharNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cContact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cContact2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cPAN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cRoomType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="d_paid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="d_remaining" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deposite" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leaveDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="otherCustomers" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roomId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-4" width="554" height="89" uuid="1e93f886-37de-4838-8e88-6a1d18df0b55"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="120" y="41" width="430" height="13" uuid="f646bb40-777e-40df-895b-de59aeb75fa5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[MOB - 9922480844, 8421301544, 9764616992 EMAIL- jadhavtemposervice@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="61" width="162" height="24" uuid="db676f2e-e050-444b-8fee-d1c45253b166"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Customer Records]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="-3" width="118" height="22" uuid="ef6fa455-3319-4823-abf3-e650f2189e41"/>
+				<text><![CDATA["Shree Ganesh Krupa"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="8" width="411" height="29" uuid="951c73ec-cc47-4161-a3b0-7b928ac6a4a5"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="24" isBold="true" isItalic="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[SUMJAI NIWAS HOME RENT]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-1" y="3" width="309" height="80" uuid="3e07398a-fd30-4356-9c53-4536714b2629"/>
+				<imageExpression><![CDATA["C:\\house_PNG50.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="5" width="39" height="20" uuid="a35f3703-c2e0-4c0d-abec-ccafe981560e"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="39" y="5" width="191" height="20" uuid="513e843a-54f4-446e-8a22-f60dbf79f982"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="66" width="554" height="1" uuid="fa8950ef-1caf-41b1-addd-5678f8fec47b"/>
+			</line>
+			<staticText>
+				<reportElement x="256" y="24" width="54" height="20" uuid="affcc7c7-8563-47fb-8b13-0e94fecd4034"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room No :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="24" width="73" height="20" uuid="543ed982-f18c-47b5-b3e4-fd6930ce7b2b"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roomNo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="69" width="554" height="1" uuid="7c423832-e13e-4bac-8f3d-d722c29ec8b4"/>
+			</line>
+			<staticText>
+				<reportElement x="400" y="25" width="50" height="20" uuid="43877e63-ee17-4514-84f3-f7c9cb12de2c"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Area :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="25" width="64" height="20" uuid="d1cf05a5-d801-4ecf-a58a-2e94e80ff170"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cArea}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="46" width="50" height="20" uuid="ba8657ba-8e39-4664-b594-0a5a8076a645"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="54" y="46" width="269" height="20" uuid="124e952a-c19c-4e23-a3a1-594d1b9b2db6"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="5" width="55" height="20" uuid="fb1a4e97-604c-4e4a-a9c9-99577c2d82dc"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adhar No :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="308" y="5" width="75" height="20" uuid="6b3d3f67-8f83-4f20-ba12-8f8dacdb2c08"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adharNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="5" width="55" height="20" uuid="a0f17324-1ca2-4f8f-aa99-df7c9ed0b509"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pan No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="5" width="75" height="20" uuid="6ff6c761-5fe1-4369-82e3-6dec0517d4b1"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cPAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="24" width="75" height="20" uuid="1da36df3-911e-4648-952a-58848338e359"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cContact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="24" width="55" height="20" uuid="1e034e1f-3444-48fd-acfc-a8c87b57922f"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="3" width="554" height="1" uuid="884f3155-50aa-4ab5-8e13-b16309f0777b"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="308" y="4" width="71" height="20" uuid="fa4d80ab-9bb0-4320-be5b-20981ac076e9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rent Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="3" width="54" height="20" uuid="405789a9-a9a4-4627-be5e-71dce09af70d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="3" width="67" height="20" uuid="72d883f9-627f-4b1f-af46-36507f735611"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room Rent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="4" width="100" height="20" uuid="6161e120-d7fb-4db7-8500-ad4a517e1509"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remaning]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="3" width="67" height="20" uuid="ecb9b5a6-68b0-46fe-bfe5-26806d23d802"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="3" width="64" height="20" uuid="82473659-5e19-4ac2-b0e5-3aad25dbe4c1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Light Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="3" width="64" height="20" uuid="f41e8a91-77cd-49d1-868a-ca2d7f862ffb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="554" height="1" uuid="1dc731ee-dc16-4393-8729-cf387c95b87e"/>
+			</line>
+			<staticText>
+				<reportElement x="498" y="4" width="67" height="20" uuid="9c0b492d-bd1b-4f0a-b85c-82d67be7f8f9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recieved By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="3" width="54" height="20" uuid="a37e4eb7-e4f3-44d0-839b-8d742203d0e4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="3" width="54" height="20" uuid="bff5fe5a-3c69-47f7-bf1c-3457c426d91a"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="3" width="67" height="20" uuid="bc2334af-d9e4-4dce-89a4-425d01541748"/>
+				<textFieldExpression><![CDATA[$F{roomRent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="4" width="72" height="20" uuid="cacda09a-0de3-4019-8172-f36e6f65ce27"/>
+				<textFieldExpression><![CDATA[$F{r_paid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="4" width="100" height="20" uuid="16f69dd3-7e5d-42b6-9fc3-fe6bc18535ab"/>
+				<textFieldExpression><![CDATA[$F{r_remaining}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="3" width="67" height="20" uuid="068fdf18-7680-4ba8-9af9-f1d45963249d"/>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="3" width="65" height="20" uuid="6ee525c1-03b8-4365-bddd-191c54bb05ad"/>
+				<textFieldExpression><![CDATA[$F{lightBill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="3" width="65" height="20" uuid="a0bbc27f-943b-4184-a604-49c5c234bd44"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" uuid="a7e7ef9d-cd27-425a-a398-2a80ab98dded"/>
+			</line>
+			<textField>
+				<reportElement x="501" y="3" width="67" height="20" uuid="9cc7a369-ff0f-49cd-81e6-212060c65af7"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="3" width="54" height="20" uuid="f5be3397-d027-4069-9fa4-572580908410"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="6" width="555" height="1" uuid="d5db2ced-045a-454b-bd0f-dc896ce4a6f9"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

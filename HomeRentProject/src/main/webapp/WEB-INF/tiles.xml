@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+
+<tiles-definitions>
+	<!-- login -->
+	<definition name="base.login" template="baselayout.jsp">
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="menu" value="" />
+	</definition>
+
+	<definition name="LoginPageView" extends="base.login">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Login/LoginPage.jsp" />
+	</definition>
+
+	<definition name="LogoutPageView" extends="base.login">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Login/LoginPage.jsp" />
+	</definition>
+	
+	<definition name="Home" extends="base.login">
+		<put-attribute name="title" value="Loading..." />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Login/Home.jsp" />
+	</definition>
+
+<!-- login end -->
+
+
+
+	<!-- Admin base layout -->
+	<definition name="base.MedicalStore" template="baselayout.jsp">
+		<put-attribute name="header" value="/MedicalHeader.jsp" />
+		<put-attribute name="footer" value="/Medicalfooter.jsp" />
+		<put-attribute name="menu" value="/MedicalMenu.jsp" />
+	</definition>
+
+
+	<definition name="HomePageView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Login/HomePage.jsp" />
+	</definition>
+
+	<definition name="roomPageView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Room Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/master/RoomPage.jsp" />
+	</definition>
+
+	<definition name="areaMasterPageView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Area Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/master/area.jsp" />
+	</definition>
+	
+	<definition name="roomTypeMasterView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Room Type Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/master/roomType.jsp" />
+	</definition>
+
+	<definition name="customerView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Customer Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/customer/customer1.jsp" />
+	</definition>
+
+	<definition name="customerRentView"
+		extends="base.MedicalStore">
+		<put-attribute name="title" value="Customer Rent Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/pay/rent.jsp" />
+	</definition>
+
+	<!-- Report Pages -->
+	
+		<definition name="monthlyCustomerReportView"
+		extends="base.MedicalStore">
+		<put-attribute name="title" value="Monthly CustomerReport View" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/allreports/monthlyCustomer.jsp" />
+	</definition>
+
+	<definition name="getcusomerWiseDetailsView"
+		extends="base.MedicalStore">
+		<put-attribute name="title" value="Payments Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/allreports/customerWiseDetails.jsp" />
+	</definition>
+	
+	<definition name="totalRoomRentView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Total Room Rent Report" />
+		<put-attribute name="body" value="/WEB-INF/jsp/allreports/totalRoomRent.jsp" />
+	</definition>
+	
+	<definition name="getPaymentSheetView" extends="base.MedicalStore">
+		<put-attribute name="title" value="Total Room Rent Report" />
+		<put-attribute name="body" value="/WEB-INF/jsp/allreports/paymentSheet.jsp" />
+	</definition>
+
+</tiles-definitions>  

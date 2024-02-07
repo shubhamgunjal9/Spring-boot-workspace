@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;in.paymentapp&apos; to &apos;01_FirstSpringApplication/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;PaymentApplication&apos;&#x0D;&#x0A;- Destination element: &apos;01_FirstSpringApplication/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;PaymentApplication/src/in.paymentapp&apos;" description="Copy package" destination="=01_FirstSpringApplication/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src&lt;in.paymentapp" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1676970076647" version="1.0"/>
+</session>
